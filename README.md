@@ -22,3 +22,7 @@ in another terminal
 	  cd fuse-mtls-demo/fuse-client
 	  export PROJECT_PATH= $(pwd)
 	  mvn spring-boot:run
+
+### Testing
+
+		curl http://localhost:8080/v1/fuse-server	  
