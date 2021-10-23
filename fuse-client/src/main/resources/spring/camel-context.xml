@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="        http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd        http://camel.apache.org/schema/spring       https://camel.apache.org/schema/spring/camel-spring-2.23.3.xsd">
+    <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
+        <route id="simple-route">
+            <from id="route-timer" uri="timer://foo?repeatCount=1"/>
+            <setHeader headerName="CamelHttpMethod" id="_setHeader1">
+                <constant>GET</constant>
+            </setHeader>
+            <setHeader headerName="Accept" id="_setHeader2">
+                <constant>*/*</constant>
+            </setHeader>
+            <to id="_to1" uri="netty4-http:https://localhost:8111/server/?keyStoreFile={{store.path}}&amp;passphrase=changeme&amp;trustStoreFile={{store.path}}"/>
+            <log id="_log1" message="reponse > ${body}"/>
+        </route>
+    </camelContext>
+</beans>
