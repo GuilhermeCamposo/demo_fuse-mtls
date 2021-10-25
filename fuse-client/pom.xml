@@ -4,20 +4,18 @@
 	xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>demo.fuse</groupId>
 	<artifactId>fuse-client</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
 	<name>Fuse Client</name>
 	<description>Fuse Client for mtls</description>
-
-	<properties>
-		<maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-		<docker.image.version>1.9</docker.image.version>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<fuse.version>7.9.0.fuse-sb2-790065-redhat-00001</fuse.version>
-	</properties>
+	
+	
+<parent>
+    <groupId>demo.fuse</groupId>
+    <artifactId>fuse-mtls-demo</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../</relativePath>
+    </parent>
+	
 
 	<dependencyManagement>
 		<dependencies>
@@ -68,19 +66,7 @@
 		</dependency>
 	</dependencies>
 
-	<repositories>
-		<repository>
-			<id>red-hat-ga-repository</id>
-			<url>https://maven.repository.redhat.com/ga</url>
-		</repository>
-	</repositories>
 
-	<pluginRepositories>
-		<pluginRepository>
-			<id>red-hat-ga-repository</id>
-			<url>https://maven.repository.redhat.com/ga</url>
-		</pluginRepository>
-	</pluginRepositories>
 
 	<build>
 		<defaultGoal>spring-boot:run</defaultGoal>
