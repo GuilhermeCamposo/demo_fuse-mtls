@@ -20,7 +20,7 @@
             <setHeader headerName="Accept" id="_setHeader3">
                 <constant>*/*</constant>
             </setHeader>
-            <to id="_to1" uri="netty4-http:https://{{service.host}}:{{service.port}}?keyStoreFile={{store.path}}&amp;passphrase=changeme&amp;trustStoreFile={{store.path}}"/>
+            <to id="_to1" uri="netty4-http:https://{{service.host}}:{{service.port}}?keyStoreResource={{store.path}}&amp;trustStoreResource={{store.path}}&amp;passphrase=changeme"/>
             <log id="result" message="Response -> ${body}"/>
         </route>
     </camelContext>

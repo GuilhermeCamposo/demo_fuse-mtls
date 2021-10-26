@@ -20,7 +20,6 @@ Example of Mutual Client Authorization with Fuse and Spring Boot
 in another terminal
 
 	cd fuse-mtls-demo/fuse-client
-	export PROJECT_PATH= $(pwd)
 	mvn spring-boot:run
 
 ### Testing
