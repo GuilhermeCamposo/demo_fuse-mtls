@@ -114,6 +114,7 @@
 			<id>openshift</id>
 			<build>
 				<plugins>
+
 					<plugin>
 						<groupId>org.jboss.redhat-fuse</groupId>
 						<artifactId>openshift-maven-plugin</artifactId>
@@ -128,12 +129,16 @@
 							</execution>
 						</executions>
 						<configuration>
+							<buildStrategy>docker</buildStrategy>
 							<enricher>
 								<excludes>
 									<exclude>fmp-openshift-route</exclude>
 								</excludes>
 							</enricher>
 							<resources>
+								<env>
+									<CERT_PATH>/tmp/certs/my.jks</CERT_PATH>
+								</env>
 								<labels>
 									<pod>
 										<property>
@@ -159,8 +164,19 @@
 									</pod>
 								</labels>
 							</resources>
+							<images>
+								<image>
+									<name>fuse-client</name>
+									<build>
+										<contextDir>${project.basedir}</contextDir>
+										<dockerFile>Dockerfile</dockerFile>
+									</build>
+								</image>
+							</images>
 						</configuration>
+
 					</plugin>
+
 				</plugins>
 			</build>
 			<properties>

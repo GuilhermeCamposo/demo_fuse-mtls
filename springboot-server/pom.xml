@@ -16,22 +16,21 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<version>1.4.0.RELEASE</version>
+			<version>${springboot.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-			<version>1.4.0.RELEASE</version>
+			<version>${springboot.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
-			<version>1.4.0.RELEASE</version>
+			<version>${springboot.version}</version>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
@@ -39,20 +38,7 @@
 			<artifactId>httpclient</artifactId>
 			<version>4.5.2</version>
 		</dependency>
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger-ui</artifactId>
-			<version>2.5.0</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
-			<version>2.5.0</version>
-			<scope>compile</scope>
-		</dependency>
 	</dependencies>
-
 
 	<build>
 		<defaultGoal>spring-boot:run</defaultGoal>
@@ -61,8 +47,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${maven-compiler-plugin.version}</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>11</source>
+					<target>11</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -79,6 +65,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
