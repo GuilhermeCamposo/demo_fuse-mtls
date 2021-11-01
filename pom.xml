@@ -11,42 +11,10 @@
 
 	<name>Fuse Mutual TLS Demo</name>
 	<description>Mutual TLS SpringBoot Example</description>
-
-	<properties>
-		<maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-		<docker.image.version>1.9</docker.image.version>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<fuse.version>7.9.0.fuse-sb2-790065-redhat-00001</fuse.version>
-		<java.version>11</java.version>
-		<springboot.version>2.3.12.RELEASE</springboot.version>
-	</properties>
-
-	<repositories>
-		<repository>
-			<id>red-hat-ga-repository</id>
-			<url>https://maven.repository.redhat.com/ga</url>
-		</repository>
-		<repository>
-			<id>maven-central</id>
-			<url>https://repo1.maven.org/maven2/</url>
-		</repository>
-	</repositories>
-
-	<pluginRepositories>
-		<pluginRepository>
-			<id>red-hat-ga-repository</id>
-			<url>https://maven.repository.redhat.com/ga</url>
-		</pluginRepository>
-		<pluginRepository>
-			<id>maven-central</id>
-			<url>https://repo1.maven.org/maven2/</url>		
-		</pluginRepository>
-	</pluginRepositories>
-
+	
 	<modules>
 		<module>fuse-client</module>
 		<module>springboot-server</module>
 	</modules>
+	
 </project>
