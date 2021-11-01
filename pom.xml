@@ -19,8 +19,7 @@
 		<docker.image.version>1.9</docker.image.version>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<fuse.version>7.9.0.fuse-sb2-790065-redhat-00001</fuse.version>
-		<java.version>1.8</java.version>
-		<!-- <springboot.version>1.4.0.RELEASE</springboot.version> -->
+		<java.version>11</java.version>
 		<springboot.version>2.3.12.RELEASE</springboot.version>
 	</properties>
 

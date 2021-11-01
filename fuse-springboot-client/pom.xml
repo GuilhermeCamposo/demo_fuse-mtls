@@ -6,8 +6,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>demo.fuse</groupId>
 	<version>1.0.0-SNAPSHOT</version>
-	<artifactId>fuse-client</artifactId>
-	<name>Fuse Client</name>
+	<artifactId>fuse-springboot-client</artifactId>
+	<name>Fuse Spring Boot Client</name>
 	<description>Fuse Client for mtls</description>
 
 	<properties>

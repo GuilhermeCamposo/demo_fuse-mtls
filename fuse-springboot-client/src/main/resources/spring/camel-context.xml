@@ -15,6 +15,7 @@
                 <handled>
                     <constant>true</constant>
                 </handled>
+                <log id="logError" loggingLevel="ERROR" message="${exception.message}"/>
                 <setBody id="error-body">
                     <constant>an error happened</constant>
                 </setBody>
